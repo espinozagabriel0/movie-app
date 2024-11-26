@@ -51,8 +51,8 @@ export default function MainContent() {
       </div>
       <div className="container mx-auto mt-5 p-5 text-center d-flex gap-3 justify-content-center align-items-center position-relative">
         <p className="position-absolute top-0 start-0 p-5 display-6">{peliculaSeleccionada}</p>
-        <button className="btn btn-secondary" onClick={incrementEntradas}>+</button>
-        <button className="btn btn-secondary" onClick={decrementEntradas}>-</button>
+        <button className="btn btn-secondary" onClick={incrementEntradas} disabled={peliculaSeleccionada.trim().length == 0}>+</button>
+        <button className="btn btn-secondary" onClick={decrementEntradas} disabled={peliculaSeleccionada.trim().length == 0}>-</button>
         <div className="display-4">
           {entradas}
         </div>
